@@ -143,3 +143,6 @@ CORS_ALLOW_CREDENTIALS = True
 JWT_AUTH = {
     'JWT_RESPONSE_PAYLOAD_HANDLER' :   'backend.utils.custom_jwt_response_handler'
 }
+
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'home'
