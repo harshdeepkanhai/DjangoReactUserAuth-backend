@@ -1,4 +1,4 @@
-from social_app.serializers import UserSerializer
+from user_auth.serializers import UserSerializer
 
 def custom_jwt_response_handler(token, user=None, request=None):
     return {
