@@ -1,0 +1,25 @@
+[project]
+name = "djangoreactuserauth-backend"
+version = "1.0.0"
+description = "Django REST authentication API for the DjangoReactUserAuth project."
+requires-python = ">=3.12"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+extend-exclude = ["**/migrations/*"]
+
+[tool.ruff.lint]
+# pycodestyle, pyflakes, isort, pyupgrade, flake8-bugbear, flake8-django.
+select = ["E", "F", "I", "UP", "B", "DJ"]
+
+[tool.ruff.lint.per-file-ignores]
+# Settings modules legitimately use star-imports to layer overrides.
+"config/settings/*" = ["F403", "F405"]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings.local"
+python_files = ["test_*.py", "tests.py"]
+testpaths = ["accounts"]
+pythonpath = ["."]
+addopts = "-ra --strict-markers"

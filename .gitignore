@@ -87,3 +87,11 @@ local_settings.py
 
 .env
 db.sqlite3
+staticfiles/
+
+### Tooling ###
+.venv/
+.pytest_cache/
+.ruff_cache/
+.idea/
+.vscode/

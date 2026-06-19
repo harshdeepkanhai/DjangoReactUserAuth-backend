@@ -1,0 +1,4 @@
+# Production-only dependencies (PostgreSQL driver + WSGI server).
+-r base.txt
+psycopg[binary]==3.2.10
+gunicorn==23.0.0
