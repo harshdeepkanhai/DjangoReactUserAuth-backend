@@ -1,0 +1,11 @@
+# Aggregator manifest. Its only job is to give Dependabot's Python
+# dependency-graph submission a canonically named "requirements.txt" to anchor
+# on — that job does not recognize the split base/local/production files by
+# themselves, even though the version updater (which follows -r includes) does.
+#
+# Humans/CI/Docker should install the environment-specific files instead:
+#   dev:  pip install -r requirements/local.txt
+#   prod: pip install -r requirements/production.txt
+-r base.txt
+-r local.txt
+-r production.txt

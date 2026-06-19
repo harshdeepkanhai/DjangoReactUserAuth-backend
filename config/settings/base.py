@@ -27,8 +27,10 @@ env = environ.Env(
 # through real environment variables and this file simply won't exist.
 environ.Env.read_env(BASE_DIR / ".env")
 
-# SECURITY WARNING: keep the secret key secret in production!
-SECRET_KEY = env("DJANGO_SECRET_KEY")
+# SECRET_KEY is intentionally defined per-environment (see local.py / production.py):
+# local supplies an insecure default for zero-config development, while production
+# requires it from the environment. Defining it here would raise before those
+# modules get the chance to apply their own value.
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env("DJANGO_DEBUG")

@@ -10,6 +10,7 @@ from .base import *  # noqa: F401,F403
 from .base import REST_FRAMEWORK, env
 
 # DEBUG must be off; SECRET_KEY / ALLOWED_HOSTS are required (no defaults).
+SECRET_KEY = env("DJANGO_SECRET_KEY")
 DEBUG = False
 ALLOWED_HOSTS = env("DJANGO_ALLOWED_HOSTS")
 CORS_ALLOWED_ORIGINS = env("CORS_ALLOWED_ORIGINS")
