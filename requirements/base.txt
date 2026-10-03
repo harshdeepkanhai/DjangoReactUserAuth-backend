@@ -1,6 +1,6 @@
 # Core runtime dependencies shared by every environment.
 # Pinned and verified compatible with Django 6.0 / Python 3.14 (June 2026).
-Django==6.0.6
+Django==6.0.8
 djangorestframework==3.17.1
 djangorestframework-simplejwt==5.5.1
 django-cors-headers==4.8.0
